@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QR Code Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>QR Code Generator</h1>
+    <input type="text" id="qrText" placeholder="Enter text or URL">
+    <button onclick="generateQRCode()">Generate</button>
+    
+    <div id="qrcode" style="margin-top: 20px;"></div>
+    
+    <!-- Updated: Use anchor tag for download -->
+    <a id="downloadBtn" href="#" style="display: none; margin-top: 10px; display: inline-block; padding: 10px 15px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">
+      Download QR
+    </a>
+  </div>
+
+  <!-- QRCode library -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
