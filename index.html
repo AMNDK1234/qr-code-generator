@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>QR Code Generator — Color & Logo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <h1>QR Code Generator</h1>
+
+    <div class="controls">
+      <label>
+        Text / URL
+        <input id="qrText" type="text" placeholder="https://example.com or any text" />
+      </label>
+
+      <div class="grid">
+        <label>
+          QR Color
+          <input id="qrColor" type="color" value="#000000" />
+        </label>
+
+        <label>
+          Background
+          <input id="bgColor" type="color" value="#ffffff" />
+        </label>
+
+        <label>
+          Size (px)
+          <input id="qrSize" type="number" min="128" max="1024" step="32" value="300" />
+        </label>
+
+        <label class="chk">
+          <input id="transparentBg" type="checkbox" />
+          Transparent background
+        </label>
+
+        <label>
+          Logo (optional)
+          <input id="logoInput" type="file" accept="image/*" />
+        </label>
+      </div>
+
+      <button id="genBtn">Generate</button>
+      <a id="downloadBtn" style="display:none">Download PNG</a>
+    </div>
+
+    <div id="qrcode"></div>
+  </div>
+
+  <!-- QR generation lib -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
